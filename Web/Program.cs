@@ -14,8 +14,10 @@ public class Program
         app.Run(async context =>
         {
             await context.Response.WriteAsync(
-                "User details: " + context.Request.HttpContext.Items["userdetails"]
+                "Authenticated!"
             );
         });
+
+        app.Run();
     }
 }
